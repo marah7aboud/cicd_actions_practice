@@ -6,6 +6,8 @@ dependencies = [
     "flake8"
 ]
 
-[project.optional-dependencies.dev]
-pre-commit = "*"
-black = "*"
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "black"
+]
