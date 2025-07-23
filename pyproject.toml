@@ -5,3 +5,7 @@ dependencies = [
     "pytest",
     "flake8"
 ]
+
+[project.optional-dependencies.dev]
+pre-commit = "*"
+black = "*"
