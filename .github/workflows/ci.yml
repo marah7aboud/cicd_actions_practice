@@ -20,9 +20,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Setup virtual environment
         run: |
+          python -m venv .venv
+          source .venv/bin/active
           uv pip install -r pyproject.toml
+
+      - name: Lint with flake8
+        run: |
+          source .venv/bin/activate
+          flake8 app.py test_app.py
 
       - name: Run tests
         run: |
